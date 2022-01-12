@@ -1,4 +1,4 @@
-// This array contains the coordinates for all bus stops between MIT and Harvard
+// This array contains the coordinates for all bus stops between the WNDR museum and the Chicago Institute of Art
 const busStops = [
     [-87.6559738, 41.8800525],
     [-87.6540812, 41.8800525],
@@ -27,7 +27,7 @@ const busStops = [
   // This is the map instance
   let map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/dark-v10',
+    style: 'mapbox://styles/mapbox/dark-v10', //dark style
     center: [-87.636177, 41.881832],
     zoom: 13,
   });
@@ -40,7 +40,7 @@ const busStops = [
   var marker = new mapboxgl.Marker()
   .setLngLat([-87.6230828, 41.8796009]) //chicago institute of art
   .addTo(map);
-  // counter here represents the index of the current bus stop
+  // counter here represents the index of the current place in route
   var counter = 0;
   function move() {
     setTimeout(() => {
